@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Produtos</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Catálogo de Produtos</h1>
+    <table border="1">
+        <tr>
+            <th>Check</th>
+            <th>Foto</th>
+            <th>Código</th>
+            <th>Descrição</th>
+            <th>Qtde em estoque</th>
+            <th>Valor Unitário</th>
+        </tr>
+        <tr>
+            <td><input type="checkbox" id="produto1"></td>
+            <td><img src="mouse optico.png"></td>
+            <td>1</td>
+            <td>Mouse Optico Nipponic</td>
+            <td>136</td>
+            <td>R$ 22,00</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" id="produto2"></td>
+            <td><img src="mouse laser.jpg"></td>
+            <td>2</td>
+            <td>Mouse Laser Microsoft</td>
+            <td>27</td>
+            <td>R$ 79,99</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" id="produto3"></td>
+            <td><img src="mouse bluetoth.jpg"></td>
+            <td>3</td>
+            <td>Mouse bluetooth USB </td>
+            <td>100</td>
+            <td>R$ 99,30</td>
+        </tr>
+    </table>
+
+    <div class="hidden" id="produto1-info">
+        <h2>Descrição</h2>
+        <h3>MOUSE OPTICO</h3>
+        <label>Especificações:</label>
+        <ul>
+            <li>Configuração USB rápida e fácil com cabo de 1,5m</li>
+            <li>Design ambidestro, produzido para caber de forma natural e perfeita na palma da sua mão</li>
+            <li>Três botões integrados</li>
+            <li>Ampla compatibilidade: Windows e Mac</li>
+        </ul>
+
+        <h3>Avaliação do Produto</h3>
+        <dl>
+            <dt>José Aparecido</dt>
+            <dd>Muito bom, mas deixa minha mão soando</dd>
+            <dt>Joaquim Jorge</dt>
+            <dd>Bom</dd>
+        </dl>
+    </div>
+
+    <div class="hidden" id="produto2-info">
+        <h2>Descrição</h2>
+        <h3>MOUSE LASER</h3>
+        <label>Especificações:</label>
+        <ul>
+            <li>rDesign ergonômico</li>
+            <li>Scroll emborrachado</li>
+            <li>Design ambidestro, produzido para caber de forma natural e perfeita na palma da sua mão</li>
+            <li>Cabo 1.20 m;</li>
+            <li>Mouse óptico com resolução de 800;</li>
+        </ul>
+
+        <h3>Avaliação do Produto</h3>
+        <dl>
+            <dt>João Gabriel Lourenço</dt>
+            <dd>Otimo</dd>
+            <dt>Rodrigo Lopes</dt>
+            <dd>queria que fosse</dd>
+        </dl>
+    </div>
+
+    <div class="hidden" id="produto3-info">
+        <h2>Descrição</h2>
+        <h3>MOUSE BLUETOOTH</h3>
+        <label>Especificações:</label>
+        <ul>
+            <li>Raio de Comunicação Sem Fio: 10 m</li>
+            <li>Conexão: Wireless 2.4GHz + Bluetooth</li>
+            <li>Design ambidestro, produzido para caber de forma natural e perfeita na palma da sua mão</li>
+            <li>Compatibilidade: Windows 7/8/10</li>
+            <li>Opções de DPI: 800/1200/1600</li>
+        </ul>
+
+        <h3>Avaliação do Produto</h3>
+        <dl>
+            <dt>Marcus vinicius de jesus</dt>
+            <dd>'Incrivel, mudou minha vida'</dd>
+            <dt>Antonio Tadeu</dt>
+            <dd>Não era o que eu esperava!</dd>
+        </dl>
+    </div>
+
+    <script>
+        document.getElementById('produto1').addEventListener('change', function () {
+            var produto1Info = document.getElementById('produto1-info');
+            if (this.checked) {
+                produto1Info.style.display = 'block';
+            } else {
+                produto1Info.style.display = 'none';
+            }
+        });
+
+        document.getElementById('produto2').addEventListener('change', function () {
+            var produto2Info = document.getElementById('produto2-info');
+            if (this.checked) {
+                produto2Info.style.display = 'block';
+            } else {
+                produto2Info.style.display = 'none';
+            }
+        });
+
+        document.getElementById('produto3').addEventListener('change', function () {
+            var produto3Info = document.getElementById('produto3-info');
+            if (this.checked) {
+                produto3Info.style.display = 'block';
+            } else {
+                produto3Info.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
